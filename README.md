@@ -2,7 +2,7 @@
 
  Console application, which loads data from the entrance examination report written in text file, processes data and saves results in a JSON form to a file.
  
- Input file:  https://github.com/V1rtus9/Entrance-Examination-Application/blob/master/Examination%20Report.txt
+ Input file:  https://github.com/V1rtus9/Entrance-Examination-Application/blob/master/examination.txt
  
  Output file: https://github.com/V1rtus9/Entrance-Examination-Application/blob/master/Examination%20Report.txt
  
