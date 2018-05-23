@@ -4,7 +4,6 @@ namespace EntranceExamination
 {
 	class Program
 	{
-		//Do not forget to import JSON.Net package - https://www.newtonsoft.com/json
 
 		private static string inputFile  = "examination.txt";
 		private static string outputFile = "Examination Report.txt";
@@ -12,7 +11,7 @@ namespace EntranceExamination
 
 		static void Main(string[] args)
 		{
-			Console.Write("Data Processing Application \r\n \r\n" +
+			Console.Write("Data processing application \r\n \r\n" +
 				"Author: Vladimir Botnar \r\n" +
 				"Email: vbotnar89@gmail.com \r\n \r\n" +
 				"Attention: Put " + inputFile + " here " + desktopPath + " \r\n \r\n" +  
