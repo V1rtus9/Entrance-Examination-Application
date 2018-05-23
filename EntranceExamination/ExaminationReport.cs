@@ -15,7 +15,7 @@ namespace EntranceExamination
 			TypeNameAssemblyFormatHandling = TypeNameAssemblyFormatHandling.Full,
 			Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs errorArgs)
 			{
-				Console.WriteLine("Json Serialization error happened: " + errorArgs.ErrorContext.Error.Message);
+				Console.WriteLine("\r\nJson Serialization error happened: " + errorArgs.ErrorContext.Error.Message);
 			}
 
 		};
@@ -29,13 +29,13 @@ namespace EntranceExamination
 		public bool ProcessExaminationData(string filePath)
 		{
 			if (string.IsNullOrEmpty(filePath)){
-				Console.WriteLine("There is no path");
+				Console.WriteLine("\r\nThere is no path");
 				return false;
 			}
 
 			if (!File.Exists(filePath))
 			{
-				Console.WriteLine("File with data does not exist, please put 'examination.txt' into the Desktop folder");
+				Console.WriteLine("\r\nFile with data does not exist, please put 'examination.txt' into the Desktop folder");
 				return false;
 			}
 
@@ -89,8 +89,9 @@ namespace EntranceExamination
 			ExaminationData.CalculateDataStatistics();
 		}
 		/// <summary>
-		/// Saves data to file in json format
+		/// Saves data to file in json format || https://www.newtonsoft.com/json
 		/// </summary>
+		/// <param name="path"></param>
 		public void SaveReportToFileFormatJson (string path)
 		{
 			try
@@ -100,7 +101,9 @@ namespace EntranceExamination
 			}
 			catch (IOException e)
 			{
-				Console.WriteLine("Something gone wrong, try again! Exception: " + e);
+				Console.WriteLine("\r\nSomething gone wrong, try again! Exception: " + e);
+				Console.ReadLine();
+				Environment.Exit(0);
 			}
 
 		}
