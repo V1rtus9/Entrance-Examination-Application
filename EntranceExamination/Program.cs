@@ -5,7 +5,7 @@ namespace EntranceExamination
 	class Program
 	{
 
-		//Do not forget to impoty JSON.Net package - https://www.newtonsoft.com/json
+		//Do not forget to import JSON.Net package - https://www.newtonsoft.com/json || Should be done automatically by VS
 
 		private static string inputFile  = "examination.txt";
 		private static string outputFile = "Examination Report.txt";
