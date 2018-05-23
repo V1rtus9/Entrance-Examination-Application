@@ -31,13 +31,13 @@ namespace EntranceExamination
 				Report.SaveReportToFileFormatJson(desktopPath + outputFile);
 				Console.WriteLine("\r\nDone");
 				Console.WriteLine("\r\nHave a nice day! I'm looking forward to your feedback.  \r\n \r\nPress any key to exit");
-				Console.ReadLine();
 			}
 			else
 			{
 				Console.WriteLine("\r\nError occurred, try again or contact with developer.");
-				Console.ReadLine();
 			}
+
+			App.Exit();
 	
 		}
 	}
