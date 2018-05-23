@@ -10,7 +10,7 @@ namespace EntranceExamination
 		public int Math;
 		public int Physics;
 		public int English;
-		public float Average;
+		public int Average;
 
 		/// <summary>
 		/// Student struct constructor
@@ -20,7 +20,7 @@ namespace EntranceExamination
 		/// <param name="physics"></param>
 		/// <param name="english"></param>
 		/// <param name="avg"></param>
-		public Student(string name, int math, int physics, int english, float avg)
+		public Student(string name, int math, int physics, int english, int avg)
 		{
 			this.Name  = name;
 			this.Math  = math;

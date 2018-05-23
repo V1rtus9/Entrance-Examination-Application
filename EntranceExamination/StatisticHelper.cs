@@ -51,6 +51,6 @@ namespace EntranceExamination
 		/// <param name="english"></param>
 		/// <param name="physics"></param>
 		/// <returns></returns>
-		public static float CalculateWeightedAverage(float math, float english, float physics) => (math * MATH_WEIGHT + english * ENGLISH_WEIGHT + physics * PHYSICS_WEIGHT) / (MATH_WEIGHT + PHYSICS_WEIGHT + ENGLISH_WEIGHT);
+		public static int CalculateWeightedAverage(int math, int english, int physics) => (math * MATH_WEIGHT + english * ENGLISH_WEIGHT + physics * PHYSICS_WEIGHT) / (MATH_WEIGHT + PHYSICS_WEIGHT + ENGLISH_WEIGHT);
 	}
 }

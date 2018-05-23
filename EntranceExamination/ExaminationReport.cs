@@ -66,7 +66,7 @@ namespace EntranceExamination
 				int physics = Int16.Parse(Regex.Match(line[2], @"\d+").Value);
 				int english = Int16.Parse(Regex.Match(line[3], @"\d+").Value);
 
-				ExaminationData.InserStudentToGroup(GroupPrefix + GroupCount, new Student(line[0], math, physics, english, StatisticHelper.CalculateWeightedAverage((float)math, (float)physics, (float)english)));
+				ExaminationData.InserStudentToGroup(GroupPrefix + GroupCount, new Student(line[0], math, physics, english, StatisticHelper.CalculateWeightedAverage(math,physics,english)));
 			}
 
 			CalculateGroupSubjectsStatistics();
