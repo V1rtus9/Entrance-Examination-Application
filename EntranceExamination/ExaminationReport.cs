@@ -16,6 +16,7 @@ namespace EntranceExamination
 			Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs errorArgs)
 			{
 				Console.WriteLine("\r\nJson Serialization error happened: " + errorArgs.ErrorContext.Error.Message);
+				ApplicationExit();
 			}
 
 		};
@@ -102,10 +103,15 @@ namespace EntranceExamination
 			catch (IOException e)
 			{
 				Console.WriteLine("\r\nSomething gone wrong, try again! Exception: " + e);
-				Console.ReadLine();
-				Environment.Exit(0);
+				ApplicationExit();
 			}
 
+		}
+
+		private static void ApplicationExit()
+		{
+			Console.ReadLine();
+			Environment.Exit(0);
 		}
 	}
 }
