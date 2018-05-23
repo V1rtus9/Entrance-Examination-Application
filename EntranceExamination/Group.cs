@@ -41,6 +41,7 @@ namespace EntranceExamination
 		/// Get all students count
 		/// </summary>
 		/// <returns></returns>
+		[JsonIgnore]
 		public int GetStudentsCount => Students.Count;
 
 		/// <summary>
