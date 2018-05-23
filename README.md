@@ -3,3 +3,342 @@
  Console application, which loads data from the entrance examination report written in text file, processes data and saves results in a JSON form to a file.
  
  Do not forget to import JSON.Net package. You could download it from here https://www.newtonsoft.com/json or use VS NuGet Package manager.
+
+
+INPUT
+
+Entrance examination
+
+Group1
+Alba Hopper;Math=60;Physics=38;English=65
+Harrison Perez;Math=25;Physics=13;English=40
+Regan Walton;Math=12;Physics=35;English=38
+Freya Barnes;Math=86;Physics=45;English=78
+Shantelle Farrow;Math=55;Physics=63;English=86
+Lillie Alfaro;Math=32;Physics=15;English=80
+Gabriele Wall;Math=155;Physics=45;English=64
+Nicky Wickens;Math=13;Physics=13;English=78
+Kathy Foreman;Math=66;Physics=35;English=46
+Rohan Buckner;Math=45;Physics=21;English=68
+
+Group2
+Celeste Blake;Math=98;Physics=45;English=92
+Kristy Mendez;Math=65;Physics=50;English=78
+Cheyenne Almond;Math=87;Physics=34;English=45
+Otto Gregory;Math=32;Physics=32;English=87
+Keiron Owen;Math=45;Physics=4;English=76
+Mehdi Gross;Math=24;Physics=25;English=72
+Mamie Fountain;Math=24;Physics=32;English=43
+Ruben Traynor;Math=13;Physics=16;English=21
+Keeley Derrick;Math=35;Physics=56;English=66
+Piers Perkins;Math=55;Physics=42;English=64
+
+Group3
+Hettie Durham;Math=74;Physics=55;English=46
+Kiyan Shea;Math=32;Physics=42;English=53
+Easton Harvey;Math=15;Physics=23;English=97
+Terri Burnett;Math=2;Physics=12;English=68
+Gareth Fisher;Math=87;Physics=61;English=84
+Fraser Small;Math=32;Physics=37;English=64
+Lukasz Andrews;Math=36;Physics=29;English=44
+Rajveer Watt;Math=52;Physics=50;English=87
+Nabil Greig;Math=78;Physic=49;English=54
+Madina Lee;Math=85;Physics=64;English=99
+
+
+OUTPUT
+
+{
+  "Groups": {
+    "Group 1": {
+      "Students": [
+        {
+          "Name": "Alba Hopper",
+          "Math": 60,
+          "Physics": 38,
+          "English": 65,
+          "Average": 56
+        },
+        {
+          "Name": "Harrison Perez",
+          "Math": 25,
+          "Physics": 13,
+          "English": 40,
+          "Average": 27
+        },
+        {
+          "Name": "Regan Walton",
+          "Math": 12,
+          "Physics": 35,
+          "English": 38,
+          "Average": 26
+        },
+        {
+          "Name": "Freya Barnes",
+          "Math": 86,
+          "Physics": 45,
+          "English": 78,
+          "Average": 72
+        },
+        {
+          "Name": "Shantelle Farrow",
+          "Math": 55,
+          "Physics": 63,
+          "English": 86,
+          "Average": 67
+        },
+        {
+          "Name": "Lillie Alfaro",
+          "Math": 32,
+          "Physics": 15,
+          "English": 80,
+          "Average": 44
+        },
+        {
+          "Name": "Gabriele Wall",
+          "Math": 155,
+          "Physics": 45,
+          "English": 64,
+          "Average": 95
+        },
+        {
+          "Name": "Nicky Wickens",
+          "Math": 13,
+          "Physics": 13,
+          "English": 78,
+          "Average": 35
+        },
+        {
+          "Name": "Kathy Foreman",
+          "Math": 66,
+          "Physics": 35,
+          "English": 46,
+          "Average": 51
+        },
+        {
+          "Name": "Rohan Buckner",
+          "Math": 45,
+          "Physics": 21,
+          "English": 68,
+          "Average": 47
+        }
+      ],
+      "Statistics": {
+        "Math": {
+          "Mode": 60,
+          "Median": 55,
+          "Average": 55
+        },
+        "Physics": {
+          "Mode": 13,
+          "Median": 35,
+          "Average": 32
+        },
+        "English": {
+          "Mode": 78,
+          "Median": 68,
+          "Average": 64
+        }
+      }
+    },
+    "Group 2": {
+      "Students": [
+        {
+          "Name": "Celeste Blake",
+          "Math": 98,
+          "Physics": 45,
+          "English": 92,
+          "Average": 82
+        },
+        {
+          "Name": "Kristy Mendez",
+          "Math": 65,
+          "Physics": 50,
+          "English": 78,
+          "Average": 65
+        },
+        {
+          "Name": "Cheyenne Almond",
+          "Math": 87,
+          "Physics": 34,
+          "English": 45,
+          "Average": 59
+        },
+        {
+          "Name": "Otto Gregory",
+          "Math": 32,
+          "Physics": 32,
+          "English": 87,
+          "Average": 51
+        },
+        {
+          "Name": "Keiron Owen",
+          "Math": 45,
+          "Physics": 4,
+          "English": 76,
+          "Average": 45
+        },
+        {
+          "Name": "Mehdi Gross",
+          "Math": 24,
+          "Physics": 25,
+          "English": 72,
+          "Average": 41
+        },
+        {
+          "Name": "Mamie Fountain",
+          "Math": 24,
+          "Physics": 32,
+          "English": 43,
+          "Average": 32
+        },
+        {
+          "Name": "Ruben Traynor",
+          "Math": 13,
+          "Physics": 16,
+          "English": 21,
+          "Average": 16
+        },
+        {
+          "Name": "Keeley Derrick",
+          "Math": 35,
+          "Physics": 56,
+          "English": 66,
+          "Average": 51
+        },
+        {
+          "Name": "Piers Perkins",
+          "Math": 55,
+          "Physics": 42,
+          "English": 64,
+          "Average": 54
+        }
+      ],
+      "Statistics": {
+        "Math": {
+          "Mode": 24,
+          "Median": 45,
+          "Average": 48
+        },
+        "Physics": {
+          "Mode": 32,
+          "Median": 34,
+          "Average": 34
+        },
+        "English": {
+          "Mode": 92,
+          "Median": 72,
+          "Average": 64
+        }
+      }
+    },
+    "Group 3": {
+      "Students": [
+        {
+          "Name": "Hettie Durham",
+          "Math": 74,
+          "Physics": 55,
+          "English": 46,
+          "Average": 59
+        },
+        {
+          "Name": "Kiyan Shea",
+          "Math": 32,
+          "Physics": 42,
+          "English": 53,
+          "Average": 41
+        },
+        {
+          "Name": "Easton Harvey",
+          "Math": 15,
+          "Physics": 23,
+          "English": 97,
+          "Average": 45
+        },
+        {
+          "Name": "Terri Burnett",
+          "Math": 2,
+          "Physics": 12,
+          "English": 68,
+          "Average": 27
+        },
+        {
+          "Name": "Gareth Fisher",
+          "Math": 87,
+          "Physics": 61,
+          "English": 84,
+          "Average": 79
+        },
+        {
+          "Name": "Fraser Small",
+          "Math": 32,
+          "Physics": 37,
+          "English": 64,
+          "Average": 44
+        },
+        {
+          "Name": "Lukasz Andrews",
+          "Math": 36,
+          "Physics": 29,
+          "English": 44,
+          "Average": 37
+        },
+        {
+          "Name": "Rajveer Watt",
+          "Math": 52,
+          "Physics": 50,
+          "English": 87,
+          "Average": 63
+        },
+        {
+          "Name": "Nabil Greig",
+          "Math": 78,
+          "Physics": 49,
+          "English": 54,
+          "Average": 62
+        },
+        {
+          "Name": "Madina Lee",
+          "Math": 85,
+          "Physics": 64,
+          "English": 99,
+          "Average": 84
+        }
+      ],
+      "Statistics": {
+        "Math": {
+          "Mode": 32,
+          "Median": 52,
+          "Average": 49
+        },
+        "Physics": {
+          "Mode": 55,
+          "Median": 49,
+          "Average": 42
+        },
+        "English": {
+          "Mode": 46,
+          "Median": 68,
+          "Average": 70
+        }
+      }
+    }
+  },
+  "Statistics": {
+    "Math": {
+      "Mode": 32,
+      "Median": 45,
+      "Average": 51
+    },
+    "Physics": {
+      "Mode": 45,
+      "Median": 37,
+      "Average": 36
+    },
+    "English": {
+      "Mode": 78,
+      "Median": 68,
+      "Average": 66
+    }
+  }
+}
