@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 
@@ -9,8 +10,11 @@ namespace EntranceExamination
 	/// </summary>
 	public class Group
 	{
-		public List<Student> Students;
-		public Dictionary<string, Statistic> Statistics;
+
+		[JsonProperty]
+		private List<Student> Students;
+		[JsonProperty]
+		private Dictionary<string, Statistic> Statistics;
 
 		/// <summary>
 		/// Group constructor
@@ -25,6 +29,18 @@ namespace EntranceExamination
 		/// </summary>
 		/// <param name="student"></param>
 		public void InsertStudent(Student student) => Students.Add(student);
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="i"></param>
+		/// <returns></returns>
+		public Student GetStudent(int i) => Students[i];
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
+		public int GetStudentsCount => Students.Count;
 
 		/// <summary>
 		/// Calculate current group statistics

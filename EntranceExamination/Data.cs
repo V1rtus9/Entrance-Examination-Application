@@ -1,12 +1,15 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace EntranceExamination
 {
 	public class Data
 	{
-		public Dictionary<string, Group> Groups = new Dictionary<string, Group>();
-		public Dictionary<string, Statistic> Statistics = new Dictionary<string, Statistic>();
+		[JsonProperty]
+		private Dictionary<string, Group> Groups = new Dictionary<string, Group>();
+		[JsonProperty]
+		private Dictionary<string, Statistic> Statistics = new Dictionary<string, Statistic>();
 
 		/// <summary>
 		/// Insert single group object to groups dictionary
@@ -75,11 +78,11 @@ namespace EntranceExamination
 
 			foreach (Group item in Groups.Values)
 			{
-				foreach (Student student in item.Students)
+				for (int i = 0; i < item.GetStudentsCount; i++)
 				{
-					mData.Add(student.Math);
-					pData.Add(student.Physics);
-					eData.Add(student.English);
+					mData.Add(item.GetStudent(i).Math);
+					pData.Add(item.GetStudent(i).Physics);
+					eData.Add(item.GetStudent(i).English);
 				}
 			}
 
