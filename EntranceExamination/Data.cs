@@ -30,7 +30,8 @@ namespace EntranceExamination
 			}
 			catch (KeyNotFoundException e)
 			{
-				Console.WriteLine("Group with current key does not exist. Exception: " + e);
+				Console.WriteLine("\r\nGroup with current key does not exist. Exception: " + e);
+				App.Exit();
 			}
 		}
 		/// <summary>
@@ -47,7 +48,8 @@ namespace EntranceExamination
 			catch (KeyNotFoundException e)
 			{
 
-				Console.WriteLine("Group with current key does not exist. Exception: " + e);
+				Console.WriteLine("\r\nGroup with current key does not exist. Exception: " + e);
+				App.Exit();
 			}
 
 			return null;

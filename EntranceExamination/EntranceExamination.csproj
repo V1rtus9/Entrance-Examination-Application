@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="ExaminationReport.cs" />
     <Compile Include="Group.cs" />
