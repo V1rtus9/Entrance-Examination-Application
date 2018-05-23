@@ -31,13 +31,14 @@ namespace EntranceExamination
 		public void InsertStudent(Student student) => Students.Add(student);
 
 		/// <summary>
-		/// 
+		/// Get single student object
 		/// </summary>
 		/// <param name="i"></param>
 		/// <returns></returns>
 		public Student GetStudent(int i) => Students[i];
+
 		/// <summary>
-		/// 
+		/// Get all students count
 		/// </summary>
 		/// <returns></returns>
 		public int GetStudentsCount => Students.Count;
